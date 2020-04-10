@@ -56,3 +56,11 @@ walk(); //gives undefined. or window object if strict is enabled.
 //'this' determined by how its called. If its called using an object, it returns the object called.
 //If called like above, standalone fn, outside of object, returns Global object, window. If strict mode is enabled, gives undefined.
 
+//To solve above problem, we should use binding
+//BIND
+
+//functions are object in JS
+
+const walk2 = person2.walk.bind(person2)//1st object decides what 'this' is gonna hold
+
+walk2();//function actually called.
