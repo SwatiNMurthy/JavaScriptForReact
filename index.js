@@ -19,4 +19,19 @@ function sayHello() {
 
 sayHello();
 
+//Objects
 
+const person = {
+    name: 'Swati',
+    walk: function() {},
+    talk() {}
+}; //Object with data members and methods.
+
+
+person.talk();
+person['walk'];
+person['name'] = 'Snm';
+
+
+const targetMember = 'name'; //When we donno what property we are gonna refer
+person[targetMember.value] = 'Abc';
