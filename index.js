@@ -35,3 +35,24 @@ person['name'] = 'Snm';
 
 const targetMember = 'name'; //When we donno what property we are gonna refer
 person[targetMember.value] = 'Abc';
+
+
+//this method
+//returns reference to current object
+const person2 = {
+    name: 'Swati',
+    walk() {
+        console.log(this);
+    }
+};
+
+person2.walk();
+
+
+const walk = person2.walk; //NOT CALLING. Just a ref
+console.log(walk);
+
+walk(); //gives undefined. or window object if strict is enabled.
+//'this' determined by how its called. If its called using an object, it returns the object called.
+//If called like above, standalone fn, outside of object, returns Global object, window. If strict mode is enabled, gives undefined.
+
