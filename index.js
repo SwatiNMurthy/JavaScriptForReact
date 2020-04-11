@@ -64,3 +64,32 @@ walk(); //gives undefined. or window object if strict is enabled.
 const walk2 = person2.walk.bind(person2)//1st object decides what 'this' is gonna hold
 
 walk2();//function actually called.
+
+//ARROW FUNCTION
+
+//OLD
+const square = function(number) {
+    return number * number;
+}
+
+//NEW
+const square2 = (number) => {
+    return number * number;
+}
+
+const square3 = number => number * number;
+
+//All give same result
+square(5);
+square2(5);
+square3(5);
+
+
+const jobs = [
+    {id: 1, isActive: true},
+    {id: 2, isActive: true},
+    {id: 3, isActive: false}
+]
+
+const activeJobs = jobs.filter(function(job) {return job.isActive; });
+const activeJobs = jobs.filter(job => job.isActive);
