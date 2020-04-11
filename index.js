@@ -190,3 +190,16 @@ const c = {...first, ...second, location: 'India'};
 
 //Spread operator to clone object
 const cloneObj = {...f1};
+
+//CLASSES
+class CoolPerson {
+    constructor(name) {
+        this.name = name;
+    }
+    walk() {
+        console.log("walk");
+    }
+}
+
+const swati = new CoolPerson("Swati");
+swati.walk();
