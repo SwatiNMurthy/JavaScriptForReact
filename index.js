@@ -169,3 +169,24 @@ const country = address.country;
 const {street, city, country} = address;
 const {street} = address;
 const {street:st} = address; //To use st and not street
+
+//Spread operator
+const first = [1,2,3];
+const second = [4,5,6];
+
+const combined = first.concat(second);
+//OR
+const combined2 = [...first, ...second];
+const combined2 = [...first, 'a', ...second]; //Can add extra element wherever we want.
+
+const clone1 = [...first]; // same as first.
+
+//Spread operator on objects
+
+const f1 = {name: 'Swati'};
+const f2 = {job: 'Student'};
+
+const c = {...first, ...second, location: 'India'};
+
+//Spread operator to clone object
+const cloneObj = {...f1};
