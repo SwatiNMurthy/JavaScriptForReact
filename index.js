@@ -150,3 +150,22 @@ const items = colors.map(function(color){
 })
 const itemsArrow = colors.map( color => '<li>'+color+'</li>');
 const itemsArrowCleaner = colors.map(color => `<li>${color}</li>`); //`<li>${color}</li>` is a template literal
+
+//Object Destructuring
+
+const address = {
+    street: '',
+    city: '',
+    country: ''
+};
+
+const street = address.street;
+const city = address.city;
+const country = address.country;
+
+//OR
+
+//const { names of target properties} = object;
+const {street, city, country} = address;
+const {street} = address;
+const {street:st} = address; //To use st and not street
