@@ -138,3 +138,15 @@ const person4 = {
 }
 
 person4.talk();
+
+//ARRAY.MAP()
+//map() used to render lists
+
+const colors = ['red', 'green', 'blue'];
+//<li>color</li>
+
+const items = colors.map(function(color){
+    return '<li>' + color + '</li>';
+})
+const itemsArrow = colors.map( color => '<li>'+color+'</li>');
+const itemsArrowCleaner = colors.map(color => `<li>${color}</li>`); //`<li>${color}</li>` is a template literal
