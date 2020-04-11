@@ -93,3 +93,48 @@ const jobs = [
 
 const activeJobs = jobs.filter(function(job) {return job.isActive; });
 const activeJobs = jobs.filter(job => job.isActive);
+
+//ARROW FUNCTIONS AND THIS
+// Arrow functions dont rebind 'this'
+const person3 = {
+    talk() {
+        console.log('this', this);
+    }
+}
+
+person3.talk(); //Expect to see a reference of person3 object
+
+const person4 = {
+    talk() {
+        setTimeout(function() {//callback fn
+            console.log('this', this);//Gives the window object, not person object.
+        },1000);
+    }
+}
+//Callback function isnt a part of any object. Its a standalone function.
+//So, this returns window object.
+person4.talk();
+
+//How to have a ref of person object inside the callback also?
+
+
+const person4 = {
+    talk() {
+        var self = this;
+        setTimeout(function() {//callback fn
+            console.log('self', self);//Gives the window object, not person object.
+        },1000);
+    }
+}
+
+//Changing function to arrow funtion makes sure, this double referencing isnt required.
+
+const person4 = {
+    talk() {//ARROW FNS dont rebind this keyword
+        setTimeout(()=> {
+            console.log("this", this);
+        }, 1000);
+    }
+}
+
+person4.talk();
