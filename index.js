@@ -218,3 +218,7 @@ class Teacher extends CoolPerson {
 const dd = new Teacher("Debabrat Das", "MS");
 dd.walk();
 dd.teach();
+
+import {Teacher} from './teacher';
+const cvk = new Teacher('CVK', 'PU');
+cvk.teach();
