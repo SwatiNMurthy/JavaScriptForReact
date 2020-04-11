@@ -1,6 +1,6 @@
 import { Person } from './person';
 
-export class Teacher extends Person {
+export default class Teacher extends Person {
     constructor(name, degree) {
         super(name);
         this.degree = degree;
@@ -9,3 +9,7 @@ export class Teacher extends Person {
         console.log("teach");
     }
 }
+
+//Named and Default Exports
+function promote () {}
+export function promote1 () {}

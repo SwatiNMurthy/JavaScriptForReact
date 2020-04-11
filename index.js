@@ -222,3 +222,12 @@ dd.teach();
 import {Teacher} from './teacher';
 const cvk = new Teacher('CVK', 'PU');
 cvk.teach();
+
+//Named and Default Exports
+
+import {promote1} from './teacher'; //Named export
+
+import Teacher from './teacher'; // Default export
+
+import Teacher, {promote1} from './teacher';
+import React, {Component} from 'react'; //Generic syntax
