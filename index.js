@@ -203,3 +203,18 @@ class CoolPerson {
 
 const swati = new CoolPerson("Swati");
 swati.walk();
+
+//INHERITANCE
+class Teacher extends CoolPerson {
+    constructor(name, degree) {
+        super(name);
+        this.degree = degree;
+    }
+    teach() {
+        console.log("teach");
+    }
+}
+
+const dd = new Teacher("Debabrat Das", "MS");
+dd.walk();
+dd.teach();
